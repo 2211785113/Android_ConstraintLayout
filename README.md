@@ -4,6 +4,7 @@
 
 接下来我们分别用LinearLayout，RelativeLayout，ConstraintLayout分别来实现让两个TextView居中显示。为了文章的简洁性，我用LL代替LinearLayout，用RL代替RelativeLayout，用CL代替ConstraintLayout。需求效果如下：
 
+
 ## LL：
 我们来看下LL属性代表的含义。
 
@@ -16,6 +17,7 @@ gravity：控制LL包含的所有子View是如何排列的。这个值影响着�
 layout_weight：设置单个子View在LL中是如何分配剩余空间的。官网默认权重为0。
 
 layoutParams：影响LL中子View的位置和大小。
+
 
 根据上边的属性含义我们来实现需求。首先在LL的最外层将gravity属性设置为center，让子View居中。然后再将TextView的weight属性设置为1，中间View的weight属性默认为0，分配剩余空间，最后将TextView的gravity属性设置为center让文字居中。效果实现。代码如下：
 ```
@@ -52,6 +54,7 @@ layoutParams：影响LL中子View的位置和大小。
 
 LL的使用场景：如果是单层布局，最好使用LL，而不使用RL。因为RL绘制渲染速度慢，性能低。
 
+
 ## RL：
 
 定义：展示子View相对于父View或子View互相之间的位置。
@@ -59,6 +62,7 @@ LL的使用场景：如果是单层布局，最好使用LL，而不使用RL。�
 好处：RL可以减少布局之间的嵌套。多层布局嵌套，用LL会增加布局层级，但是用RL一层即可，使应用更加扁平化。
 
 使用场景：如果你发现自己使用了几个内部LL组，你可能想要去用一个RL去代替它。
+
 
 我们来看看RL中CENTER_HORIZONTAL的属性含义：Rule that centers the child horizontally with respect to the bounds of its RelativeLayout parent。意思是规定子元素相对于父元素的边界水平居中。
 
@@ -96,6 +100,7 @@ LL的使用场景：如果是单层布局，最好使用LL，而不使用RL。�
 </RelativeLayout>
 ```
 
+
 ## CL： 
 建议大家在看下边内容之前先结合ConstraintLayout官网认真实践下这个链接的文章。
 
@@ -120,7 +125,9 @@ bias：偏斜。两个不可能的约束最后居中或按偏斜排列。
 
 guideline：辅助线。约束布局对不可见的View有控制权。
 
+
 优势：
+
 布局调整更为方便，可以直接拖拽进行操作；
 
 布局之间相对位置更好控制，CL的guideline属性对不可见的View具有控制权，View设置为GONE不影响界面效果；
@@ -130,6 +137,7 @@ guideline：辅助线。约束布局对不可见的View有控制权。
 CL的chains属性有三种模式，比weight属性更加强大，在权重分配比LL还多一个bias属性；
 
 减少页面布局层级，使页面更加扁平化，渲染速度更快，性能更高。
+
 
 根据上边的属性含义我们来实现需求。
 
@@ -273,6 +281,7 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 </android.support.constraint.ConstraintLayout>
 ```
 
+
 ## 划重点：
 
 权重分配：
@@ -289,6 +298,7 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 综上来看，本例最适合采用的方法其实是偏斜bias，接下来是链条chain，因为它们都可以分配权重。
 
+
 ## 划重点：
 
 三大布局对比：
@@ -299,9 +309,11 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 * CL的优点：减少页面布局层级，使页面更加扁平化，渲染速度更快，提升性能，比LL和RL更加强大。
 
+
 ## 附项目地址：
 
 Github传送门：https://github.com/2211785113/Android_ConstraintLayout
+
 
 ## 快问快答小测试：
 
@@ -321,7 +333,9 @@ Github传送门：https://github.com/2211785113/Android_ConstraintLayout
 
 请参看：https://github.com/2211785113/Android_SlidingConflictDemo。
 
+
 ## 涨姿势：
+
 需求：LL让子View居中除了最外层LL设置gravity属性为center还有什么办法？
 
 提示：也可以让子View设置layout_gravity属性。
@@ -334,12 +348,14 @@ Github传送门：https://github.com/2211785113/Android_ConstraintLayout
 
 子View的layout_gravity属性设置为center，只有一个方向会生效。水平居中设置center起作用。垂直居中设置center起作用。
 
+
 ## 小贴士：
 gravity和layout_gravity的区别：
 
 gravity：用于父组件。表示父组件的子组件在组件中的位置。
 
 layout_gravity：用于子组件。表示子组件自身在父组件中的位置。
+
 
 margin和padding的区别：
 
