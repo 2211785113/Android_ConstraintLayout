@@ -20,18 +20,19 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:onClick="centerHorizontalCL1"
-        android:text="水平居中（ConstaintLayout1）"
+        android:onClick="centerHorizontalRL"
+        android:text="水平居中（RelativeLayout）"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button1" />
+
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:onClick="centerHorizontalCL2"
-        android:text="水平居中（ConstaintLayout2）"
+        android:onClick="centerHorizontalCL1"
+        android:text="水平居中（ConstaintLayout1）"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button2" />
@@ -40,10 +41,20 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:onClick="centerHorizontalCL2"
+        android:text="水平居中（ConstaintLayout2）"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button3" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:onClick="centerHorizontalCL3"
         android:text="水平居中（ConstaintLayout3）"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button3" />
+        app:layout_constraintTop_toBottomOf="@id/button4" />
 
 </android.support.constraint.ConstraintLayout>

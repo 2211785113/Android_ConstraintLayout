@@ -20,7 +20,8 @@
         <activity android:name=".centerhorizontal.CL1Activity" />
         <activity android:name=".centerhorizontal.CL2Activity" />
         <activity android:name=".centerhorizontal.CL3Activity" />
-        <activity android:name=".swiperefreshlayout.CLActivity"></activity>
+        <activity android:name=".swiperefreshlayout.CLActivity" />
+        <activity android:name=".centerhorizontal.RLActivity"></activity>
     </application>
 
 </manifest>

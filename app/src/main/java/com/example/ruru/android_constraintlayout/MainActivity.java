@@ -9,6 +9,7 @@ import com.example.ruru.android_constraintlayout.centerhorizontal.CL1Activity;
 import com.example.ruru.android_constraintlayout.centerhorizontal.CL2Activity;
 import com.example.ruru.android_constraintlayout.centerhorizontal.CL3Activity;
 import com.example.ruru.android_constraintlayout.centerhorizontal.LLActivity;
+import com.example.ruru.android_constraintlayout.centerhorizontal.RLActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void centerHorizontalLL(View v) {
         startActivity(new Intent(this, LLActivity.class));
+    }
+
+    public void centerHorizontalRL(View v) {
+        startActivity(new Intent(this, RLActivity.class));
     }
 
     public void centerHorizontalCL1(View v) {
