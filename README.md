@@ -6,7 +6,7 @@
 
 ![image](https://raw.githubusercontent.com/2211785113/Android_ConstraintLayout/master/image/11-1.png)
   
-  
+<br/>
 
 ## LL：
 我们来看下LL属性代表的含义。
@@ -20,6 +20,7 @@ gravity：控制LL包含的所有子View是如何排列的。这个值影响着�
 layout_weight：设置单个子View在LL中是如何分配剩余空间的。官网默认权重为0。
 
 layoutParams：影响LL中子View的位置和大小。
+
 <br/>
 
 根据上边的属性含义我们来实现需求。首先在LL的最外层将gravity属性设置为center，让子View居中。然后再将TextView的weight属性设置为1，中间View的weight属性默认为0，分配剩余空间，最后将TextView的gravity属性设置为center让文字居中。效果实现。代码如下：
@@ -105,6 +106,7 @@ LL的使用场景：如果是单层布局，最好使用LL，而不使用RL。�
 </RelativeLayout>
 ```
 
+<br/>
 
 ## CL： 
 建议大家在看下边内容之前先结合ConstraintLayout官网认真实践下这个链接的文章。
@@ -115,6 +117,7 @@ https://juejin.im/entry/5a53676bf265da3e3d48feba。
 
 这篇文章讲的非常棒，将ConstraintLayout常见的用法都囊括了进来。
 
+<br/>
 
 定义：允许你去灵活的定义和更改布局。
 
