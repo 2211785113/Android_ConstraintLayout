@@ -5,7 +5,8 @@
 接下来我们分别用LinearLayout，RelativeLayout，ConstraintLayout分别来实现让两个TextView居中显示。为了文章的简洁性，我用LL代替LinearLayout，用RL代替RelativeLayout，用CL代替ConstraintLayout。需求效果如下：
 
 ![image](https://raw.githubusercontent.com/2211785113/Android_ConstraintLayout/master/image/11-1.png)
-<br/>
+  
+  
 
 ## LL：
 我们来看下LL属性代表的含义。
