@@ -133,6 +133,7 @@ bias：偏斜。两个不可能的约束最后居中或按偏斜排列。
 
 guideline：辅助线。约束布局对不可见的View有控制权。
 
+<br/>
 
 优势：
 
@@ -146,6 +147,7 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 减少页面布局层级，使页面更加扁平化，渲染速度更快，性能更高。
 
+<br/>
 
 根据上边的属性含义我们来实现需求。
 
@@ -289,6 +291,7 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 </android.support.constraint.ConstraintLayout>
 ```
 
+<br/>
 
 ## 划重点：
 
@@ -306,6 +309,7 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 综上来看，本例最适合采用的方法其实是偏斜bias，接下来是链条chain，因为它们都可以分配权重。
 
+<br/>
 
 ## 划重点：
 
@@ -317,11 +321,13 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 * CL的优点：减少页面布局层级，使页面更加扁平化，渲染速度更快，提升性能，比LL和RL更加强大。
 
+<br/>
 
 ## 附项目地址：
 
 Github传送门：https://github.com/2211785113/Android_ConstraintLayout
 
+<br/>
 
 ## 快问快答小测试：
 
@@ -345,6 +351,7 @@ Github传送门：https://github.com/2211785113/Android_ConstraintLayout
 
 请参看：https://github.com/2211785113/Android_SlidingConflictDemo。
 
+<br/>
 
 ## 涨姿势：
 
@@ -360,6 +367,7 @@ Github传送门：https://github.com/2211785113/Android_ConstraintLayout
 
 子View的layout_gravity属性设置为center，只有一个方向会生效。水平居中设置center起作用。垂直居中设置center起作用。
 
+<br/>
 
 ## 小贴士：
 gravity和layout_gravity的区别：
@@ -368,6 +376,7 @@ gravity：用于父组件。表示父组件的子组件在组件中的位置。
 
 layout_gravity：用于子组件。表示子组件自身在父组件中的位置。
 
+<br/>
 
 margin和padding的区别：
 
