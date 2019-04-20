@@ -5,6 +5,7 @@
 接下来我们分别用LinearLayout，RelativeLayout，ConstraintLayout分别来实现让两个TextView居中显示。为了文章的简洁性，我用LL代替LinearLayout，用RL代替RelativeLayout，用CL代替ConstraintLayout。需求效果如下：
 
 ![image](https://raw.githubusercontent.com/2211785113/Android_ConstraintLayout/master/image/11-1.png)
+<br/>
 
 ## LL：
 我们来看下LL属性代表的含义。
@@ -18,7 +19,7 @@ gravity：控制LL包含的所有子View是如何排列的。这个值影响着�
 layout_weight：设置单个子View在LL中是如何分配剩余空间的。官网默认权重为0。
 
 layoutParams：影响LL中子View的位置和大小。
-
+<br/>
 
 根据上边的属性含义我们来实现需求。首先在LL的最外层将gravity属性设置为center，让子View居中。然后再将TextView的weight属性设置为1，中间View的weight属性默认为0，分配剩余空间，最后将TextView的gravity属性设置为center让文字居中。效果实现。代码如下：
 ```
@@ -55,6 +56,7 @@ layoutParams：影响LL中子View的位置和大小。
 
 LL的使用场景：如果是单层布局，最好使用LL，而不使用RL。因为RL绘制渲染速度慢，性能低。
 
+<br/>
 
 ## RL：
 
@@ -64,6 +66,7 @@ LL的使用场景：如果是单层布局，最好使用LL，而不使用RL。�
 
 使用场景：如果你发现自己使用了几个内部LL组，你可能想要去用一个RL去代替它。
 
+<br/>
 
 我们来看看RL中CENTER_HORIZONTAL的属性含义：Rule that centers the child horizontally with respect to the bounds of its RelativeLayout parent。意思是规定子元素相对于父元素的边界水平居中。
 
