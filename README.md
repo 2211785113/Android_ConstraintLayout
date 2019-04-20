@@ -121,29 +121,27 @@ https://juejin.im/entry/5a53676bf265da3e3d48feba。
 
 以下几个属性含义是我根据官网得出的，剩下自己需要自行查看官网：
 
-relative position：相对位置。允许你去定义一个相对于另一个的布局。可以在水平和竖直方向约束布局。
+>relative position：相对位置。允许你去定义一个相对于另一个的布局。可以在水平和竖直方向约束布局。例如：buttonB在buttonA的右边：buttonB设置属性app:layout_constraintLeft_toRightOf。意思是告诉系统我们想要buttonB的左边界被约束到buttonA的右边。
 
-例如：buttonB在buttonA的右边：buttonB设置属性app:layout_constraintLeft_toRightOf。意思是告诉系统我们想要buttonB的左边界被约束到buttonA的右边。
+>margin：边缘空白。margin可以是确定的值或者等于0或者持有一个尺寸。
 
-margin：边缘空白。margin可以是确定的值或者等于0或者持有一个尺寸。
+>bias：偏斜。两个不可能的约束最后居中或按偏斜排列。
 
-bias：偏斜。两个不可能的约束最后居中或按偏斜排列。
-
-guideline：辅助线。约束布局对不可见的View有控制权。
+>guideline：辅助线。约束布局对不可见的View有控制权。
 
 <br/>
 
 优势：
 
-布局调整更为方便，可以直接拖拽进行操作；
+>布局调整更为方便，可以直接拖拽进行操作；
 
-布局之间相对位置更好控制，CL的guideline属性对不可见的View具有控制权，View设置为GONE不影响界面效果；
+>布局之间相对位置更好控制，CL的guideline属性对不可见的View具有控制权，View设置为GONE不影响界面效果；
 
-动态创建布局方便，对控件的控制能力更加强大，可以实现动画效果；
+>动态创建布局方便，对控件的控制能力更加强大，可以实现动画效果；
 
-CL的chains属性有三种模式，比weight属性更加强大，在权重分配比LL还多一个bias属性；
+>CL的chains属性有三种模式，比weight属性更加强大，在权重分配比LL还多一个bias属性；
 
-减少页面布局层级，使页面更加扁平化，渲染速度更快，性能更高。
+>减少页面布局层级，使页面更加扁平化，渲染速度更快，性能更高。
 
 <br/>
 
@@ -295,15 +293,15 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 权重分配：
 
-* LL：gravity+weight（场景：分配剩余空间）
+>LL：gravity+weight（场景：分配剩余空间）
 
-* RL：相对位置gravity+center属性（场景：控件之间相互约束）
+>RL：相对位置gravity+center属性（场景：控件之间相互约束）
 
-* CL：偏斜bias（场景：按比例确定具体位置，等价于LL中的weight）
+>CL：偏斜bias（场景：按比例确定具体位置，等价于LL中的weight）
 
-* CL：链条chain，chainStyle+weight+gravity（场景：水平或竖直方向控件之间形成约束关系，即形成链条）
+>CL：链条chain，chainStyle+weight+gravity（场景：水平或竖直方向控件之间形成约束关系，即形成链条）
 
-* CL：辅助线guideline（场景：作为参照物进行对齐，控件之间形成约束，有点类似于RL中的center类属性）
+>CL：辅助线guideline（场景：作为参照物进行对齐，控件之间形成约束，有点类似于RL中的center类属性）
 
 综上来看，本例最适合采用的方法其实是偏斜bias，接下来是链条chain，因为它们都可以分配权重。
 
@@ -313,11 +311,11 @@ CL的chains属性有三种模式，比weight属性更加强大，在权重分配
 
 三大布局对比：
 
-* 单层布局：用LL，因为用RL绘制渲染速度慢，性能低。
+>单层布局：用LL，因为用RL绘制渲染速度慢，性能低。
 
-* 多层嵌套布局：用RL，因为用LL会增加页面嵌套布局层级。
+>多层嵌套布局：用RL，因为用LL会增加页面嵌套布局层级。
 
-* CL的优点：减少页面布局层级，使页面更加扁平化，渲染速度更快，提升性能，比LL和RL更加强大。
+>CL的优点：减少页面布局层级，使页面更加扁平化，渲染速度更快，提升性能，比LL和RL更加强大。
 
 <br/>
 
@@ -359,25 +357,25 @@ Github传送门：https://github.com/2211785113/Android_ConstraintLayout
 
 特别提示：
 
-父View方向为vertical时，子View的layout_gravity属性设置为left/right/center_horizontal等横向属性才会生效。
+>父View方向为vertical时，子View的layout_gravity属性设置为left/right/center_horizontal等横向属性才会生效。
 
-父View方向为horizontal时，子View的layout_gravity属性设置为top/bottom/center_vertical等纵向属性才会生效。
+>父View方向为horizontal时，子View的layout_gravity属性设置为top/bottom/center_vertical等纵向属性才会生效。
 
-子View的layout_gravity属性设置为center，只有一个方向会生效。水平居中设置center起作用。垂直居中设置center起作用。
+>子View的layout_gravity属性设置为center，只有一个方向会生效。水平居中设置center起作用。垂直居中设置center起作用。
 
 <br/>
 
 ## 小贴士：
 gravity和layout_gravity的区别：
 
-gravity：用于父组件。表示父组件的子组件在组件中的位置。
+>gravity：用于父组件。表示父组件的子组件在组件中的位置。
 
-layout_gravity：用于子组件。表示子组件自身在父组件中的位置。
+>layout_gravity：用于子组件。表示子组件自身在父组件中的位置。
 
 <br/>
 
 margin和padding的区别：
 
-margin：指定此视图左、上、右和底部的额外空间。
+- margin：指定此视图左、上、右和底部的额外空间。
 
-padding：以这个视图的左、上、右、下部分的像素显示，以特定的像素偏移视图的内容。比如：left padding为2将使View的内容从左边缘向右移动2个像素。
+- padding：以这个视图的左、上、右、下部分的像素显示，以特定的像素偏移视图的内容。比如：left padding为2将使View的内容从左边缘向右移动2个像素。
