@@ -376,6 +376,6 @@ gravity和layout_gravity的区别：
 
 margin和padding的区别：
 
-- margin：指定此视图左、上、右和底部的额外空间。
+>margin：指定此视图左、上、右和底部的额外空间。
 
-- padding：以这个视图的左、上、右、下部分的像素显示，以特定的像素偏移视图的内容。比如：left padding为2将使View的内容从左边缘向右移动2个像素。
+>padding：以这个视图的左、上、右、下部分的像素显示，以特定的像素偏移视图的内容。比如：left padding为2将使View的内容从左边缘向右移动2个像素。
