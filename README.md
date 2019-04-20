@@ -11,15 +11,13 @@
 ## LL：
 我们来看下LL属性代表的含义。
 
-orientation ：子View是以行还是以列展示的。如果是一行使用horizontal，一列则使用vertical。
+>orientation ：子View是以行还是以列展示的。如果是一行使用horizontal，一列则使用vertical。
 
-gravity：控制LL包含的所有子View是如何排列的。这个值影响着单行或单列中所有子View水平或竖直的排列，还展示了一个对象应该如何在边界，x轴或y轴上放置它的内容。
+>gravity：控制LL包含的所有子View是如何排列的。这个值影响着单行或单列中所有子View水平或竖直的排列，还展示了一个对象应该如何在边界，x轴或y轴上放置它的内容。例如：最外层LL的gravity属性设置为center，那么它的子View就是在中间的。
 
-例如：最外层LL的gravity属性设置为center，那么它的子View就是在中间的。
+>layout_weight：设置单个子View在LL中是如何分配剩余空间的。官网默认权重为0。
 
-layout_weight：设置单个子View在LL中是如何分配剩余空间的。官网默认权重为0。
-
-layoutParams：影响LL中子View的位置和大小。
+>layoutParams：影响LL中子View的位置和大小。
 
 <br/>
 
