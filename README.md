@@ -1,4 +1,5 @@
 # Android_ConstraintLayout
+## 用LinearLayout，RelativeLayout，ConstraintLayout五种方法实现两个TextView左右水平居中。
 
 你确定你对Android的布局精通了吗？如果你能立马用LinearLayout，RelativeLayout，ConstraintLayout说出如何让两个TextView左右水平居中该如何实现，那就不需要看下边的文章了，如果不能，还需要多多看官网实践，修炼自己。
 
